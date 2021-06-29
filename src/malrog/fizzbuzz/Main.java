@@ -3,10 +3,13 @@ package malrog.fizzbuzz;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int maxValue = 300;
+        Scanner usersMaxNumber = new Scanner(System.in);
+        System.out.println("Enter the maximum number:");
+        int maxValue = usersMaxNumber.nextInt();
         for (int i = 1; i <= maxValue; i++) {
             List<String> words = new ArrayList<>();
             addWordAtEndForIteratorDivisibleBy(i, 3, "Fizz", words);
