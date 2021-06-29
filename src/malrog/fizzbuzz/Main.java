@@ -11,6 +11,7 @@ public class Main {
             addWordAtEndForIteratorDivisibleBy(i, 3, "Fizz", words);
             addWordAtEndForIteratorDivisibleBy(i, 5, "Buzz", words);
             addWordAtEndForIteratorDivisibleBy(i, 7, "Bang", words);
+            substituteWordForIteratorDivisibleBy(i, 11, "Bong", words);
             if (words.isEmpty()) System.out.print(i);
             else for (String word : words) System.out.print(word);
             System.out.print("\n");
@@ -19,5 +20,11 @@ public class Main {
 
     static void addWordAtEndForIteratorDivisibleBy(int iterator, int divisor, String wordToAdd, List<String> words) {
         if (iterator % divisor == 0) words.add(wordToAdd);
+    }
+    static void substituteWordForIteratorDivisibleBy(int iterator, int divisor, String wordToAdd, List<String> words) {
+        if (iterator % divisor == 0){
+            words.clear();
+            words.add(wordToAdd);
+        }
     }
 }
