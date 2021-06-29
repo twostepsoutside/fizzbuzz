@@ -10,6 +10,7 @@ public class Main {
             List<String> words = new ArrayList<>();
             addWordAtEndForIteratorDivisibleBy(i, 3, "Fizz", words);
             addWordAtEndForIteratorDivisibleBy(i, 5, "Buzz", words);
+            addWordAtEndForIteratorDivisibleBy(i, 7, "Bang", words);
             if (words.isEmpty()) System.out.print(i);
             else for (String word : words) System.out.print(word);
             System.out.print("\n");
